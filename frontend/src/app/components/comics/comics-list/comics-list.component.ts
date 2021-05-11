@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ComicsService } from '../comics.service';
 
 @Component({
   selector: 'app-comics-list',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comics-list.component.css']
 })
 export class ComicsListComponent implements OnInit {
+  
+  allCharacters: any[];
+  
+  constructor(public service: ComicsService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getCharacters();
   }
 
+  getCharacters() {
+    this.service.listarQuadrinhos().subscribe(data => {
+      this.allCharacters = data.data.results;
+      console.log(this.allCharacters);
+    });
+  }
+
+  print(){
+    console.log(this.allCharacters[0])
+  }
 }

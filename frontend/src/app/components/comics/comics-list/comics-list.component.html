@@ -1,1 +1,9 @@
-<p>comics-list works!</p>
+<div class="row">
+
+<div class="card col-xl-2" *ngFor="let item of allCharacters" style="margin: 1em;">
+    <img class="card-img-top" src="{{ item.thumbnail.path }}.{{item.thumbnail.extension}}" style="width: 100%;" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">{{item.title}}.</p>
+    </div>
+  </div>
+  </div>
