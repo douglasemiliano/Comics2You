@@ -1,9 +1,13 @@
-<div class="row">
-
-<div class="card col-xl-2" *ngFor="let item of allCharacters" style="margin: 1em;">
-    <img class="card-img-top" src="{{ item.thumbnail.path }}.{{item.thumbnail.extension}}" style="width: 100%;" alt="Card image cap">
-    <div class="card-body">
-      <p class="card-text">{{item.title}}.</p>
+<div class="container-fluid" >
+  <swiper [config]="config" *ngIf="allCharacters" style="height: 2em; background-color: #fff;" >
+    <div *ngFor="let item of allCharacters" >
+      <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+        <div class="container imagem" style="padding: 2em;">
+          <img class="card-img-top" src="{{ item.thumbnail.path }}.{{item.thumbnail.extension}}" style="width: 100%; cursor: pointer;" (click)="print(item)" alt="Card image cap">
+        </div>
+      </div>
     </div>
-  </div>
-  </div>
+  </swiper>
+</div>
+
+
