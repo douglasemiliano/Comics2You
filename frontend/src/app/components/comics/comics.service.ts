@@ -10,7 +10,7 @@ export class ComicsService {
 
  PUBLIC_KEY = 'f26c221e36c1c508289724a215452a71';
  HASH = '5617a3f28f027cfb55f0406503066686';
- URL_API = `https://gateway.marvel.com:443/v1/public/comics?limit=50&offset=100&ts=1620686549&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
+ URL_API = `https://gateway.marvel.com:443/v1/public/comics?limit=100&offset=100&ts=1620686549&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
 
 
 
