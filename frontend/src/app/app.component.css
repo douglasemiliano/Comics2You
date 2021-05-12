@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+  }
+  
+  .bg-opacity{
+      position: relative;
+      background-color: #000;
+  }
+  
+  .bg-opacity::before{
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.3;
+      background:       url("https://comunidadenerd.com.br/_midias/png/2020/04/06/xmen_vingadores_marvel_quadrinhos-12357627.png") no-repeat center center;
+      background-size: cover;
+  }
+  

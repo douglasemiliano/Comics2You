@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { ComicViewComponent } from './comic-view/comic-view.component';
+import {MatDialogModule, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -12,18 +14,21 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
 };
 
 @NgModule({
-  declarations: [ComicsListComponent],
+  declarations: [ComicsListComponent, ComicViewComponent],
   imports: [
     CommonModule,
     HttpClientModule,
-    SwiperModule
+    SwiperModule,
+    MatDialogModule,
   ],
-  exports: [ComicsListComponent],
+  exports: [ComicsListComponent, ComicViewComponent],
   providers:[
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
-    }
+    },
+    { provide: MAT_DIALOG_DATA, useValue: {} },
+    { provide: MatDialogRef, useValue: {} }
   ]
 })
 export class ComicsModule { }
