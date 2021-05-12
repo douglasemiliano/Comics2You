@@ -1,12 +1,19 @@
-<div class="container-fluid" style="width: 44em; height: 44em;">
-    <h1>{{data.title}}</h1>
+<button mat-icon-button class="close icon-outside" [mat-dialog-close]="true">
+    <mat-icon class="close-icon">close</mat-icon>
+  </button>
+<div class="container-fluid" id="modal">
     <div class="row">
-        <div class="col-md-6">
-            <img class="card-img-top" src="{{data.image}}" style="width: 100%; cursor: pointer;" alt="Card image cap">
+        <div class="col-md-6" style="margin-top: 2em;">
+            <img class="card-img-top" src="{{data.image}}" alt="Card image cap">
         </div>
-        <div class="col-md-6">
-            <h4>Autores</h4>
-            <h5 *ngFor="let aut of data.authors">{{aut.name}}</h5>
+        <div class="col-md-6 texts">
+            <p style="font-size: 24pt; line-height: 1.2em;"><strong>Olá super herói em treinamento!</strong></p> 
+            <p style="font-size: 12pt;">você fez uma ótima escolha selecionando a HQ: 
+                <strong>{{data.title}}</strong></p>
+            <p>{{data.description}}</p>
+            <h1><strong>de <s>${{data.prices[0].price}}</s> por $0.00</strong></h1>
+            <h5>Autores: {{this.getAuthors()}}</h5>
+            <button class="btn" style="color: red;"><strong>PEDIR AGORA</strong></button>
         </div>
     </div>
 

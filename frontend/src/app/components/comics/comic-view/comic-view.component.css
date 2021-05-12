@@ -1,0 +1,42 @@
+.container-fluid{
+    color: white;
+    width: 44em;
+    height: 35em;
+    text-align: left;
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: -2em;
+}
+
+
+.card-img-top{
+    width: 100%;
+    margin-left: 1em;
+    transform: perspective(120px) rotateY(6deg);
+    box-shadow: 5px 10px 5px rgba(0,0,0,0.5);
+    
+}
+
+.texts{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    margin-top: 1em;
+
+}
+@media (max-width: 760px)
+{
+  .card-img-top
+   {
+    display: none;
+   }
+   .container-fluid{
+       width: 18em;
+       padding-top: 2em;
+   }
+   .texts{
+       margin-top: -1em;
+       text-align: center;
+   }
+
+}

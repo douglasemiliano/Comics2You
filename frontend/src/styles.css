@@ -3,6 +3,8 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/*mat-dialog-container {
-    background-color:Black !important;
- }*/
+mat-dialog-container {
+
+    background: rgb(2,0,36) !important;;
+    background-image: linear-gradient( 181.3deg,  rgba(134,15,15,1) 24.9%, rgba(183,10,10,1) 46.9%, rgba(210,70,0,1) 85.1% )!important;
+ }

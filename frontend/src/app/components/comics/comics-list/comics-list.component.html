@@ -1,9 +1,16 @@
-<div class="container-fluid" >
-  <swiper [config]="config" *ngIf="allCharacters" style="height: 2em; background-color: #fff;" >
+<div class="container-fluid" style="height: 32em;" >
+  <swiper [config]="config" *ngIf="allCharacters" >
     <div *ngFor="let item of allCharacters" >
       <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
-        <div class="container imagem" style="padding: 2em;">
-          <img class="card-img-top" src="{{ item.thumbnail.path }}.{{item.thumbnail.extension}}" style="width: 100%; cursor: pointer;" (click)="print(item)" alt="Card image cap">
+        <div class="flip-container" style="padding: 2em;">
+          <div class="flipper">
+            <div class="front">
+              <img class="card-img-top" src="{{ item.thumbnail.path }}.{{item.thumbnail.extension}}" style="width: 100%; cursor: pointer;" (click)="print(item)" alt="Card image cap">
+            </div>
+            <div class="back">
+              <img class="card-img-top" src="{{ item.thumbnail.path }}.{{item.thumbnail.extension}}" style="width: 100%; cursor: pointer;" (click)="print(item)" alt="Card image cap">
+            </div>
+          </div>
         </div>
       </div>
     </div>
