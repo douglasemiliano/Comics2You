@@ -7,6 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { MapsModule } from './components/maps/maps.module';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatGoogleMapsAutocompleteModule } from '@angular-material-extensions/google-maps-autocomplete';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -16,10 +20,14 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserModule,
     AppRoutingModule,
     ComicsModule,
+    MapsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatFormFieldModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    // important !!!
+    MatGoogleMapsAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,7 +13,7 @@
             <p>{{data.description}}</p>
             <h1><strong>de <s>${{data.prices[0].price}}</s> por $0.00</strong></h1>
             <h5>Autores: {{this.getAuthors()}}</h5>
-            <button class="btn" style="color: red;"><strong>PEDIR AGORA</strong></button>
+            <button class="btn" style="color: red;" (click)="openDialog($event)"><strong>PEDIR AGORA</strong></button>
         </div>
     </div>
 

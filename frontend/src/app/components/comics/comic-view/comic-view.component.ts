@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MapViewComponent } from '../../maps/map-view/map-view.component';
 
 @Component({
   selector: 'app-comic-view',
@@ -8,7 +9,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class ComicViewComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dialogRef: MatDialogRef<ComicViewComponent>, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     console.log(this.data.description)
@@ -25,6 +26,16 @@ export class ComicViewComponent implements OnInit {
       }
     }
     return authors;
+  }
+
+  openDialog(event){
+    this.dialogRef.close();
+    console.log(event);
+    this.dialog.open(MapViewComponent, {
+      data: {
+        title: 'title',
+      }
+    });
   }
 
 }

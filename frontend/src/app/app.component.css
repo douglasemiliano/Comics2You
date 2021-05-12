@@ -21,3 +21,6 @@ body{
       background-size: cover;
   }
   
+  agm-map {
+    height: 300px;
+   }
