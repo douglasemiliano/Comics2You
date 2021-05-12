@@ -1,0 +1,28 @@
+<button mat-icon-button class="close icon-outside">
+  <mat-icon class="close-icon">close</mat-icon>
+</button>
+<div class="container-fluid" style="height: 35em; width: 44em;">
+  <p style="font-size: 24pt; line-height: 1.2em; color: white; text-align: center;"><strong>Como te encontramos, caro super herói?</strong></p> 
+    <mat-card>
+        <mat-card-content>
+          <!-- #######   here we go !! ######-->
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Digite seu Endereço</mat-label>
+            <input matInput type="text"
+            (onAutocompleteSelected)="onAutocompleteSelected($event)"
+            (onLocationSelected)="onLocationSelected($event)"
+            (onGermanAddressMapped)="onGermanAddressMapped($event)"
+            placeholder="Endereço"
+            formControlName="property"
+            matGoogleMapsAutocomplete
+          />
+          </mat-form-field>
+          <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+            <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+          </agm-map>
+        </mat-card-content>
+     </mat-card>
+     <button mat-raised-button color="basic" style="color: red;"><strong>PEDIR AGORA</strong></button>
+</div>
+
+
