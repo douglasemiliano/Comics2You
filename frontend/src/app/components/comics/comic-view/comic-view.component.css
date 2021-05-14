@@ -40,3 +40,14 @@
    }
 
 }
+
+@media (max-width: 1440px)
+{
+
+   .container-fluid{
+       width: 20em;
+       padding-top: 2em;
+   }
+
+
+}
