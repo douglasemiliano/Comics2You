@@ -50,7 +50,7 @@ export class ComicsListComponent implements OnInit {
     scrollbar: false,
     navigation: true,
     pagination: false,
-    breakpoints:{ 600: { slidesPerView: 3}, 1000:{slidesPerView: 4}, 200:{ slidesPerView: 1}, 1440:{slidesPerView: 5}
+    breakpoints:{ 600: { slidesPerView: 3}, 1000:{slidesPerView: 4}, 200:{ slidesPerView: 1}, 1440:{slidesPerView: 5}, 1600:{slidesPerView:6}
     }
   };
 

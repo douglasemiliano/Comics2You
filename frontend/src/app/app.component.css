@@ -5,6 +5,7 @@ body{
   .bg-opacity{
       position: relative;
       background-color: #000;
+      height: 44em;
   }
   
   .bg-opacity::before{

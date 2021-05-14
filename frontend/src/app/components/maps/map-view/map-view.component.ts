@@ -83,7 +83,7 @@ export class MapViewComponent implements OnInit {
   openSnackBar() {
     this._snackBar.open('Quadrinho encomendado com sucesso!','Fechar', {
       horizontalPosition: 'center',
-      verticalPosition: 'bottom',
+      verticalPosition: 'top',
       duration: 5000,
     });
   }
