@@ -24,7 +24,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     MatButtonModule,
     AgmCoreModule.forRoot({
-      apiKey:'AIzaSyDnPBXKpWGC83AHonBasDIygcgNFUTF-z0',
+      //insert your google cloud platform API
+      apiKey:'',
       libraries: ['places']
     }),
   ],
