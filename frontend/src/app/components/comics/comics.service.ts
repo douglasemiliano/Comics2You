@@ -16,12 +16,6 @@ export class ComicsService {
 
  constructor(private http: HttpClient) { }
 
-
-  getAllCharacters(): Observable<any> {
-    return this.http.get<any>(this.URL_API)
-    .pipe(map((data: any) => data.data.results))
-  }
-
   listarQuadrinhos(): Observable<any>{
   return this.http.get<any>(this.URL_API);
   }

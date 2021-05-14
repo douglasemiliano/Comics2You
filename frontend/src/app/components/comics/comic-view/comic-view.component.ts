@@ -12,7 +12,6 @@ export class ComicViewComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dialogRef: MatDialogRef<ComicViewComponent>, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    console.log(this.data.description)
 ;  }
 
   getAuthors(){
@@ -30,7 +29,6 @@ export class ComicViewComponent implements OnInit {
 
   openDialog(event){
     this.dialogRef.close();
-    console.log(event);
     this.dialog.open(MapViewComponent, {
       data: {
         title: 'title',

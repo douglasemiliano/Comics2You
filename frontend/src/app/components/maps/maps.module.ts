@@ -8,7 +8,8 @@ import { AgmCoreModule } from '@agm/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -23,6 +24,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatInputModule,
     MatButtonModule,
+    FormsModule,
+    MatSnackBarModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       //insert your google cloud platform API
       apiKey:'',

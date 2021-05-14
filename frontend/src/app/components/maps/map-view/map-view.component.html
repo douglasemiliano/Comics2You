@@ -1,28 +1,62 @@
-<button mat-icon-button class="close icon-outside">
+<button mat-icon-button class="close icon-outside" (click)="onClose()">
   <mat-icon class="close-icon">close</mat-icon>
 </button>
-<div class="container-fluid" style="height: 35em; width: 44em;">
-  <p style="font-size: 24pt; line-height: 1.2em; color: white; text-align: center;"><strong>Como te encontramos, caro super herói?</strong></p> 
-    <mat-card>
+<div class="container-fluid row" style="height: 100%; width: 44em; text-align: center;">
+  <p><strong>Agora nós precisamos da sua identidade e do seu esconderijo secreto!</strong></p> 
+  
+    <form [formGroup]="form">
+      <mat-card style="width: 100%;">
         <mat-card-content>
-          <!-- #######   here we go !! ######-->
-          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-form-field appearance="outline" style="width: 100%;" class="col-12 col-md-8">
+              <mat-label>Nome</mat-label>
+              <input style="height: 1em;" matInput placeholder="Placeholder" formControlName="name">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+
+
+
+
+          <mat-form-field appearance="outline" style="width: 100%;" class="col-md-4 col-12">
+            <mat-label>Idade</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="age" type="number">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+
+
+          <mat-form-field appearance="outline" style="width: 100%;" class="col-md-6 col-12">
+            <mat-label>CPF</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="cpf">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;" class="col-md-6 col-12">
+            <mat-label>Celular</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="phone">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;" class="col-12">
             <mat-label>Digite seu Endereço</mat-label>
             <input matInput type="text"
             (onAutocompleteSelected)="onAutocompleteSelected($event)"
             (onLocationSelected)="onLocationSelected($event)"
-            (onGermanAddressMapped)="onGermanAddressMapped($event)"
             placeholder="Endereço"
-            formControlName="property"
-            matGoogleMapsAutocomplete
-          />
+            formControlName="agm"
+            matGoogleMapsAutocomplete/>
           </mat-form-field>
-          <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
-            <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
-          </agm-map>
+          <div class="container">
+            <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+              <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+            </agm-map>
+            </div>
         </mat-card-content>
-     </mat-card>
-     <button mat-raised-button color="basic" style="color: red;"><strong>PEDIR AGORA</strong></button>
+    </mat-card>
+  </form>
+
+
+    <div class="col-12 offset-md-9 col-md-2 " style="padding-top: 2em;">    
+      <button mat-raised-button color="basic" style="color: red;" (click)="onSubmit()"><strong>PEDIR AGORA</strong></button>
+  </div>
 </div>
 
 
