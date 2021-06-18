@@ -1,5 +1,5 @@
 # Comics2You
-Aplicação angular  que consome a api da marvel para mostrar uma lista de quadrinhos e enviar para qualquer endereço no mapa.
+Aplicação angular  que consome a api da marvel para mostrar uma lista de quadrinhos e enviar para qualquer endereço no mapa a partir da api do google maps.
 
 Pssos a passa executar:
 
